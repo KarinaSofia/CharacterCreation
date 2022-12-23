@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/api/characters")
 public class CharacterController {
     @Autowired
@@ -49,35 +50,7 @@ public class CharacterController {
 
     }
 
-/*
-    @PutMapping("/{id}")
-    public Character updateCharacter(@PathVariable long id, @Valid @RequestBody CharacterRequest characterRequest){
-        Character characterToBeUpdated = new Character(characterRequest);
-        characterToBeUpdated.setC_Id(id);
-        return characterRespository.save(characterToBeUpdated);
-    }
 
-      (@PathVariable long C_Id, @Valid @RequestBody TeacherRequest teacherRequest){
-
-        Character updatedCharacter = characterService.updateCharacter(C_id, characterRequest);
-        return new CharacterResponse(updatedcharacter);
-
-*/
-
-
-    /*
-        @PutMapping("/{id}")
-    public TeacherResponse updateTeacher(@PathVariable long id,@Valid @RequestBody TeacherRequest teacherRequest){
-
-        Teacher updatedTeacher = teacherService.updateTeacher(id, teacherRequest);
-        return new TeacherResponse(updatedTeacher);
-    }
-
-    public void deleteCharacter(@PathVariable long C_Id)
-    {
-        characterService.deleteCharacter(C_Id);
-    }
-     */
 
 
 }
