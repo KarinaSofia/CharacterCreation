@@ -10,19 +10,20 @@ import lombok.Setter;
 @Setter
 public class CharacterRequest {
     @NotBlank
-    private String C_First_Name;
-    private String C_Last_Name;
-    private String C_NickName;
-    private int C_Age;
-    private String C_Gender;
-    private String C_PrimaryPersonalityTrait;
-    private String C_PrimaryAccessory;
-    private String C_Height;
-    private String C_Weight;
-    private String C_EyeColor;
-    private String C_HairColor;
-    private String C_SkinColor;
-    private String C_Residence;
-    private String C_Ethnicity;
-    private String C_Occupation;
+    private String first_Name;
+
+    private String last_Name;
+    private String nickName;
+    private int age;
+    private String gender;
+    private String primaryPersonalityTrait;
+    private String primaryAccessory;
+    private String height;
+    private String weight;
+    private String eyeColor;
+    private String hairColor;
+    private String skinColor;
+    private String residence;
+    private String ethnicity;
+    private String occupation;
 }

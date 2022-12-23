@@ -16,70 +16,71 @@ public class Character {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long C_Id;
+    private long id;
 
-    @Column(name="C_FirstName", nullable = false)
-    private String C_FirstName;
+    @Column(name="first_Name", nullable = false)
+    private String firstName;
 
 
     @Column(name="C_LastName")
-    private String C_LastName;
+    private String LastName;
 
     @Column(name="C_NickName")
-    private String C_NickName;
+    private String NickName;
 
     @Column(name="C_Age")
-    private int C_Age;
+    private int Age;
 
     @Column(name="C_Gender")
-    private String C_Gender;
+    private String Gender;
 
     @Column(name="C_PrimaryPersonalityTrait")
-    private String C_PrimaryPersonalityTrait;
+    private String PrimaryPersonalityTrait;
 
     @Column(name="C_PrimaryAccessory")
-    private String C_PrimaryAccessory;
+    private String PrimaryAccessory;
 
     @Column(name="C_Height")
-    private String C_Height;
+    private String Height;
 
     @Column(name="C_Weight")
-    private String C_Weight;
+    private String Weight;
 
     @Column(name="C_EyeColor")
-    private String C_EyeColor;
+    private String EyeColor;
 
     @Column(name="C_HairColor")
-    private String C_HairColor;
+    private String HairColor;
 
     @Column(name="C_SkinColor")
-    private String C_SkinColor;
+    private String SkinColor;
 
     @Column(name="C_Residence")
-    private String C_Residence;
+    private String Residence;
 
     @Column(name="C_Ethnicity")
-    private String C_Ethnicity;
+    private String Ethnicity;
 
     @Column(name="C_Occupation")
-    private String C_Occupation;
+    private String Occupation;
 
 
     public Character(CharacterRequest characterRequest){
-        C_FirstName = characterRequest.getC_First_Name();
-        C_LastName = characterRequest.getC_Last_Name();
-        C_Age = characterRequest.getC_Age();
-        C_Gender = characterRequest.getC_Gender();;
-        C_PrimaryPersonalityTrait = characterRequest.getC_PrimaryPersonalityTrait();
-        C_PrimaryAccessory = characterRequest.getC_PrimaryAccessory();
-        C_Height = characterRequest.getC_Height();
-        C_Weight = characterRequest.getC_Weight();
-        C_EyeColor = characterRequest.getC_EyeColor();
-        C_HairColor = characterRequest.getC_HairColor();
-        C_SkinColor = characterRequest.getC_SkinColor();
-        C_Residence = characterRequest.getC_Residence();
-        C_Ethnicity = characterRequest.getC_Ethnicity();
-        C_Occupation = characterRequest.getC_Occupation();
+        firstName = characterRequest.getFirst_Name();
+
+        LastName = characterRequest.getLast_Name();
+        Age = characterRequest.getAge();
+        Gender = characterRequest.getGender();;
+        PrimaryPersonalityTrait = characterRequest.getPrimaryPersonalityTrait();
+        PrimaryAccessory = characterRequest.getPrimaryAccessory();
+        Height = characterRequest.getHeight();
+        Weight = characterRequest.getWeight();
+        EyeColor = characterRequest.getEyeColor();
+        HairColor = characterRequest.getHairColor();
+        SkinColor = characterRequest.getSkinColor();
+        Residence = characterRequest.getResidence();
+        Ethnicity = characterRequest.getEthnicity();
+        Occupation = characterRequest.getOccupation();
 
     }
 

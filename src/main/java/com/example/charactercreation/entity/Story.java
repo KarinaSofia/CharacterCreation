@@ -13,14 +13,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Story {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long S_Id;
+    private long id;
 
     @Column
-    private String S_Name;
+    private String name;
 
     @Column
-    private String S_Genre;
+    private String genre;
 
     @Column
-    private String S_Desc;
+    private String desc;
 }

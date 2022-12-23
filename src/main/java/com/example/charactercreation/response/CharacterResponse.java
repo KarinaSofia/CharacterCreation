@@ -8,40 +8,41 @@ import lombok.Setter;
 @Setter
 public class CharacterResponse {
 
-private long C_Id;
-private String C_First_Name;
-private String C_Last_Name;
-private String C_NickName;
-private int C_Age;
-private String C_Gender;
-private String C_PrimaryPersonalityTrait;
-private String C_PrimaryAccessory;
-private String C_Height;
-private String C_Weight;
-private String C_EyeColor;
-private String C_HairColor;
-private String C_SkinColor;
-private String C_Residence;
-private String C_Ethnicity;
-private String C_Occupation;
+private long id;
+private String first_Name;
+
+private String last_Name;
+private String nickName;
+private int age;
+private String gender;
+private String primaryPersonalityTrait;
+private String primaryAccessory;
+private String height;
+private String weight;
+private String eyeColor;
+private String hairColor;
+private String skinColor;
+private String residence;
+private String ethnicity;
+private String occupation;
 
 public CharacterResponse(Character character){
-    C_Id = character.getC_Id();
-    C_First_Name = character.getC_FirstName();
-    C_Last_Name = character.getC_LastName();
-    C_NickName = character.getC_NickName();
-    C_Age = character.getC_Age();
-    C_Gender = getC_Gender();
-    C_PrimaryPersonalityTrait = character.getC_PrimaryPersonalityTrait();
-    C_PrimaryAccessory = character.getC_PrimaryAccessory();
-    C_Height = character.getC_Height();
-    C_Weight = character.getC_Weight();
-    C_EyeColor = character.getC_EyeColor();
-    C_HairColor = character.getC_HairColor();
-    C_SkinColor = character.getC_SkinColor();
-    C_Residence = character.getC_Residence();
-    C_Ethnicity = character.getC_Ethnicity();
-    C_Occupation = character.getC_Occupation();
+    id = character.getId();
+    first_Name = character.getFirstName();
+   last_Name = character.getLastName();
+   nickName = character.getNickName();
+   age = character.getAge();
+   gender = getGender();
+   primaryPersonalityTrait = character.getPrimaryPersonalityTrait();
+   primaryAccessory = character.getPrimaryAccessory();
+   height = character.getHeight();
+   weight = character.getWeight();
+   eyeColor = character.getEyeColor();
+   hairColor = character.getHairColor();
+   skinColor = character.getSkinColor();
+   residence = character.getResidence();
+   ethnicity = character.getEthnicity();
+   occupation = character.getOccupation();
 }
 
 }
