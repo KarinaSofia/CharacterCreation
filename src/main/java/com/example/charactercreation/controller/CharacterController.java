@@ -6,6 +6,7 @@ import com.example.charactercreation.response.CharacterResponse;
 import com.example.charactercreation.service.CharacterService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -30,8 +31,36 @@ public class CharacterController {
     }
 
     @PostMapping()
+    @ResponseStatus(HttpStatus.CREATED)
     public CharacterResponse addCharacter(@Valid @RequestBody CharacterRequest characterRequest){
         Character character = characterService.insertCharacter(characterRequest);
         return new CharacterResponse(character);
     }
+
+    /*
+    @PutMapping("/{id}")
+    public Character updateCharacter(@PathVariable long id, @Valid @RequestBody CharacterRequest characterRequest){
+        Character characterToBeUpdated = new Character(characterRequest);
+        characterToBeUpdated.setC_Id(id);
+        return characterRespository.save(characterToBeUpdated);
+    }
+
+
+     */
+
+    /*
+        @PutMapping("/{id}")
+    public TeacherResponse updateTeacher(@PathVariable long id,@Valid @RequestBody TeacherRequest teacherRequest){
+
+        Teacher updatedTeacher = teacherService.updateTeacher(id, teacherRequest);
+        return new TeacherResponse(updatedTeacher);
+    }
+
+    public void deleteTeacher(@PathVariable long id)
+    {
+        teacherService.deleteTeacher(id);
+    }
+     */
+
+
 }
