@@ -22,46 +22,46 @@ public class Character {
     private String firstName;
 
 
-    @Column(name="C_LastName")
+    @Column(name="LastName")
     private String LastName;
 
-    @Column(name="C_NickName")
+    @Column(name="NickName")
     private String NickName;
 
-    @Column(name="C_Age")
+    @Column(name="Age")
     private int Age;
 
-    @Column(name="C_Gender")
+    @Column(name="Gender")
     private String Gender;
 
-    @Column(name="C_PrimaryPersonalityTrait")
+    @Column(name="PrimaryPersonalityTrait")
     private String PrimaryPersonalityTrait;
 
-    @Column(name="C_PrimaryAccessory")
+    @Column(name="PrimaryAccessory")
     private String PrimaryAccessory;
 
-    @Column(name="C_Height")
+    @Column(name="Height")
     private String Height;
 
-    @Column(name="C_Weight")
+    @Column(name="Weight")
     private String Weight;
 
-    @Column(name="C_EyeColor")
+    @Column(name="EyeColor")
     private String EyeColor;
 
-    @Column(name="C_HairColor")
+    @Column(name="HairColor")
     private String HairColor;
 
-    @Column(name="C_SkinColor")
+    @Column(name="SkinColor")
     private String SkinColor;
 
-    @Column(name="C_Residence")
+    @Column(name="Residence")
     private String Residence;
 
-    @Column(name="C_Ethnicity")
+    @Column(name="Ethnicity")
     private String Ethnicity;
 
-    @Column(name="C_Occupation")
+    @Column(name="Occupation")
     private String Occupation;
 
 

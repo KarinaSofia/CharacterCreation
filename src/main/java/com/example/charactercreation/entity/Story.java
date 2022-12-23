@@ -15,12 +15,12 @@ public class Story {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
+    @Column(name = "name")
     private String name;
 
-    @Column
+    @Column(name = "genre")
     private String genre;
 
-    @Column
+    @Column(name = "desc")
     private String desc;
 }

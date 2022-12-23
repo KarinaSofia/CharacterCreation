@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface CharacterRepository extends CrudRepository <Character, Long> {
-    //List<Character> findAllByFirstNameIgnoreCase(String FirstName);
+    List<Character> findAllByFirstNameirstNameIgnoreCase(String firstName);
 
 }
