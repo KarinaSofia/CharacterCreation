@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/characters/")
+@RequestMapping("/api/characters")
 public class CharacterController {
     @Autowired
     CharacterService characterService;

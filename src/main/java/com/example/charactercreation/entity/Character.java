@@ -14,7 +14,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Character {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long C_Id;
 
     @Column(name="C_FirstName", nullable = false)
@@ -65,7 +66,6 @@ public class Character {
 
 
     public Character(CharacterRequest characterRequest){
-        C_Id = characterRequest.getC_Id();
         C_FirstName = characterRequest.getC_First_Name();
         C_LastName = characterRequest.getC_Last_Name();
         C_Age = characterRequest.getC_Age();

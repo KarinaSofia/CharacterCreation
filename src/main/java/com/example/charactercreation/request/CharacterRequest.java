@@ -1,6 +1,7 @@
 package com.example.charactercreation.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,8 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CharacterRequest {
-    @NotBlank
-    private long C_Id;
     @NotBlank
     private String C_First_Name;
     private String C_Last_Name;
