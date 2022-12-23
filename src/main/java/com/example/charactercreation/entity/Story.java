@@ -5,9 +5,13 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import java.util.List;
 
 @Entity
-@Table(name = "stoires")
+@Table(name = "stories")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,4 +27,14 @@ public class Story {
 
     @Column(name = "desc")
     private String desc;
+
+
+
+
+
+    /*
+    @ManyToOne(optional = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name="teacher_id")
+     */
 }

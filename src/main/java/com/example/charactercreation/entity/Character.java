@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name="characters")
@@ -64,6 +66,13 @@ public class Character {
     @Column(name="Occupation")
     private String Occupation;
 
+    @ManyToOne(optional = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JoinColumn(name="story_id")
+    private Story story;
+
+
+
 
     public Character(CharacterRequest characterRequest){
         firstName = characterRequest.getFirst_Name();
@@ -81,6 +90,8 @@ public class Character {
         Residence = characterRequest.getResidence();
         Ethnicity = characterRequest.getEthnicity();
         Occupation = characterRequest.getOccupation();
+
+
 
     }
 
