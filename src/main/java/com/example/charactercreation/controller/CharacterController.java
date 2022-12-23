@@ -4,6 +4,7 @@ import com.example.charactercreation.entity.Character;
 import com.example.charactercreation.request.CharacterRequest;
 import com.example.charactercreation.response.CharacterResponse;
 import com.example.charactercreation.service.CharacterService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,8 @@ public class CharacterController {
     }
 
     @PostMapping()
-    public void addCharacter(@RequestBody CharacterRequest characterRequest){
-
+    public CharacterResponse addCharacter(@Valid @RequestBody CharacterRequest characterRequest){
+        Character character = characterService.insertCharacter(characterRequest);
+        return new CharacterResponse(character);
     }
 }

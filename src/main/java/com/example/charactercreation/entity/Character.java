@@ -1,6 +1,7 @@
 package com.example.charactercreation.entity;
 
 
+import com.example.charactercreation.request.CharacterRequest;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,7 +29,6 @@ public class Character {
 
     @Column(name="C_Age")
     private int C_Age;
-
 
     @Column(name="C_Gender")
     private String C_Gender;
@@ -63,4 +63,26 @@ public class Character {
     @Column(name="C_Occupation")
     private String C_Occupation;
 
+
+    public Character(CharacterRequest characterRequest){
+        C_Id = characterRequest.getC_Id();
+        C_FirstName = characterRequest.getC_First_Name();
+        C_LastName = characterRequest.getC_Last_Name();
+        C_Age = characterRequest.getC_Age();
+        C_Gender = characterRequest.getC_Gender();;
+        C_PrimaryPersonalityTrait = characterRequest.getC_PrimaryPersonalityTrait();
+        C_PrimaryAccessory = characterRequest.getC_PrimaryAccessory();
+        C_Height = characterRequest.getC_Height();
+        C_Weight = characterRequest.getC_Weight();
+        C_EyeColor = characterRequest.getC_EyeColor();
+        C_HairColor = characterRequest.getC_HairColor();
+        C_SkinColor = characterRequest.getC_SkinColor();
+        C_Residence = characterRequest.getC_Residence();
+        C_Ethnicity = characterRequest.getC_Ethnicity();
+        C_Occupation = characterRequest.getC_Occupation();
+
+    }
+
 }
+
+
