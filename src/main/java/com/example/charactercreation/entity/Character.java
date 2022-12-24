@@ -69,8 +69,8 @@ public class Character {
 
     public Character(CharacterRequest characterRequest){
         firstName = characterRequest.getFirstName();
-
         LastName = characterRequest.getLast_Name();
+        NickName = characterRequest.getNickName();
         Age = characterRequest.getAge();
         Gender = characterRequest.getGender();;
         PrimaryPersonalityTrait = characterRequest.getPrimaryPersonalityTrait();
