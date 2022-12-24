@@ -26,6 +26,7 @@ private String skinColor;
 private String residence;
 private String ethnicity;
 private String occupation;
+private Boolean fav;
 
 public CharacterResponse(Character character){
     id = character.getId();
@@ -45,6 +46,7 @@ public CharacterResponse(Character character){
    residence = character.getResidence();
    ethnicity = character.getEthnicity();
    occupation = character.getOccupation();
+   fav = character.getFav();
 }
 
 }

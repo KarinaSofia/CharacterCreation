@@ -70,6 +70,9 @@ public class Character {
     @Column(name="Occupation")
     private String Occupation;
 
+    @Column()
+    private Boolean fav = false;
+
 
     public Character(CharacterRequest characterRequest){
         firstName = characterRequest.getFirstName();
@@ -87,7 +90,7 @@ public class Character {
         Residence = characterRequest.getResidence();
         Ethnicity = characterRequest.getEthnicity();
         Occupation = characterRequest.getOccupation();
-
+        fav = characterRequest.getFav();
 
 
     }
