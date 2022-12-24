@@ -13,9 +13,9 @@ public class CharacterRequest {
     private String firstName;
 
     private String last_Name;
-    private String nickName;
+    private String NickName;
     private int age;
-    private String gender;
+    private String Gender;
     private String primaryPersonalityTrait;
     private String primaryAccessory;
     private String height;

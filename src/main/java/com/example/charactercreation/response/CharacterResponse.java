@@ -12,9 +12,9 @@ private long id;
 private String first_Name;
 
 private String last_Name;
-private String nickName;
+private String NickName;
 private int age;
-private String gender;
+private String Gender;
 private String primaryPersonalityTrait;
 private String primaryAccessory;
 private String height;
@@ -30,9 +30,9 @@ public CharacterResponse(Character character){
     id = character.getId();
     first_Name = character.getFirstName();
    last_Name = character.getLastName();
-   nickName = character.getNickName();
+   NickName = character.getNickName();
    age = character.getAge();
-   gender = getGender();
+   Gender = getGender();
    primaryPersonalityTrait = character.getPrimaryPersonalityTrait();
    primaryAccessory = character.getPrimaryAccessory();
    height = character.getHeight();
