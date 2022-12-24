@@ -20,7 +20,7 @@ public class Character {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name="first_Name", nullable = false)
+    @Column(name="firstName", nullable = false)
     private String firstName;
 
 
@@ -66,16 +66,9 @@ public class Character {
     @Column(name="Occupation")
     private String Occupation;
 
-    @ManyToOne(optional = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name="story_id")
-    private Story story;
-
-
-
 
     public Character(CharacterRequest characterRequest){
-        firstName = characterRequest.getFirst_Name();
+        firstName = characterRequest.getFirstName();
 
         LastName = characterRequest.getLast_Name();
         Age = characterRequest.getAge();

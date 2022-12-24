@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 public class CharacterRequest {
     @NotBlank
-    private String first_Name;
+    private String firstName;
 
     private String last_Name;
     private String nickName;
