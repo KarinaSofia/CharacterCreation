@@ -27,5 +27,4 @@ public class CharacterRequest {
     private String residence;
     private String ethnicity;
     private String occupation;
-    private String Fav;
 }

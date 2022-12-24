@@ -27,7 +27,6 @@ private String residence;
 private String ethnicity;
 private String occupation;
 
-private String Fav;
 
 public CharacterResponse(Character character){
     id = character.getId();
@@ -47,7 +46,6 @@ public CharacterResponse(Character character){
    residence = character.getResidence();
    ethnicity = character.getEthnicity();
    occupation = character.getOccupation();
-   Fav = character.getFav();
 }
 
 }
