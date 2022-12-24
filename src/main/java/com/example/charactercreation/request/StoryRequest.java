@@ -8,7 +8,6 @@ import lombok.Setter;
 @Setter
 public class StoryRequest {
     @NotBlank
-    private long id;
     private String name;
     private String genre;
     private String desc;

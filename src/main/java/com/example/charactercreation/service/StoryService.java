@@ -5,9 +5,11 @@ import com.example.charactercreation.exception.ResourceNotFound;
 import com.example.charactercreation.repository.StoryRepository;
 import com.example.charactercreation.request.StoryRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StoryService {
 
     @Autowired
@@ -31,6 +33,13 @@ public class StoryService {
         return storyRepository.save(storyToBeUpdated);
     }
 
-
+    public void deleteStory(long id){
+        if(storyRepository.existsById(id)){
+            storyRepository.deleteById(id);
+        }
+        else{
+            throw new ResourceNotFound("story id is not found");
+        }
+    }
 
 }

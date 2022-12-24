@@ -14,7 +14,6 @@ private String first_Name;
 private String last_Name;
 private String NickName;
 private int age;
-
 private String Birthday;
 private String Gender;
 private String primaryPersonalityTrait;
