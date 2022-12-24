@@ -5,6 +5,7 @@ import com.example.charactercreation.exception.ResourceNotFound;
 import com.example.charactercreation.repository.CharacterRepository;
 import com.example.charactercreation.request.CharacterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,7 +32,7 @@ public class CharacterService {
     public Character updateCharacter(long characterId, CharacterRequest characterRequest)
     {
         characterRepository.findById(characterId)
-                .orElseThrow(()->new ResourceNotFound("teacher id is not found"));
+                .orElseThrow(()->new ResourceNotFound("character id is not found"));
 
         Character characterToBeUpdated = new Character(characterRequest);
         characterToBeUpdated.setId(characterId);
@@ -39,4 +40,14 @@ public class CharacterService {
         return characterRepository.save(characterToBeUpdated);
 
     }
+
+    public void deleteCharacter(long id){
+        if(characterRepository.existsById(id)){
+            characterRepository.deleteById(id);
+        }
+        else{
+            throw new ResourceNotFound("character id is not found");
+        }
+    }
+
 }
