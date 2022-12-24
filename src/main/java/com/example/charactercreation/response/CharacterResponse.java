@@ -27,7 +27,6 @@ private String residence;
 private String ethnicity;
 private String occupation;
 
-
 public CharacterResponse(Character character){
     id = character.getId();
     first_Name = character.getFirstName();

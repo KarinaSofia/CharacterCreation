@@ -3,6 +3,7 @@ package com.example.charactercreation.entity;
 
 import com.example.charactercreation.request.CharacterRequest;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -68,7 +69,6 @@ public class Character {
 
     @Column(name="Occupation")
     private String Occupation;
-
 
 
     public Character(CharacterRequest characterRequest){
