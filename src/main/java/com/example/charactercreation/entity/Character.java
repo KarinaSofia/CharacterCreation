@@ -33,6 +33,9 @@ public class Character {
     @Column(name="Age")
     private int Age;
 
+    @Column(name="Birthday")
+    private String Birthday;
+
     @Column(name="Gender")
     private String Gender;
 

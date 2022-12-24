@@ -14,6 +14,8 @@ private String first_Name;
 private String last_Name;
 private String NickName;
 private int age;
+
+private String Birthday;
 private String Gender;
 private String primaryPersonalityTrait;
 private String primaryAccessory;
@@ -31,6 +33,7 @@ public CharacterResponse(Character character){
     first_Name = character.getFirstName();
    last_Name = character.getLastName();
    NickName = character.getNickName();
+   Birthday = character.getBirthday();
    age = character.getAge();
    Gender = getGender();
    primaryPersonalityTrait = character.getPrimaryPersonalityTrait();
