@@ -69,6 +69,9 @@ public class Character {
     @Column(name="Occupation")
     private String Occupation;
 
+    @Column(name="Fav")
+    private String Fav;
+
 
     public Character(CharacterRequest characterRequest){
         firstName = characterRequest.getFirstName();
@@ -86,6 +89,7 @@ public class Character {
         Residence = characterRequest.getResidence();
         Ethnicity = characterRequest.getEthnicity();
         Occupation = characterRequest.getOccupation();
+        Fav = characterRequest.getFav();
 
 
 
