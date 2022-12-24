@@ -1,0 +1,36 @@
+package com.example.charactercreation.service;
+
+import com.example.charactercreation.entity.Story;
+import com.example.charactercreation.exception.ResourceNotFound;
+import com.example.charactercreation.repository.StoryRepository;
+import com.example.charactercreation.request.StoryRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
+public class StoryService {
+
+    @Autowired
+    private StoryRepository storyRepository;
+
+
+    public List<Story> getAllStories(){
+        return (List<Story>) storyRepository.findAll();
+    }
+
+    public Story addStory(StoryRequest storyRequest){
+        Story story = new Story(storyRequest);
+
+        return storyRepository.save(story);
+    }
+
+    public Story updateStory(long id, StoryRequest storyRequest){
+        storyRepository.findById(id).orElseThrow(()->new ResourceNotFound("teacher id is not found"));
+        Story storyToBeUpdated = new Story(storyRequest);
+        storyToBeUpdated.setId(id);
+        return storyRepository.save(storyToBeUpdated);
+    }
+
+
+
+}
